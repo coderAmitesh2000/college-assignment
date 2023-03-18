@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+}
+
+.blink {
+    color: rgb(0, 0, 0);
+    animation: blink 1s ease-in-out infinite alternate;
+}
+@keyframes blink {
+	0% {
+		color: rgb(0, 0, 0);
+	}
+	100% {
+		color: transparent;
+	}
+}
+#companyName {
+    font-family: 'Sora', sans-serif;
+    font-weight: bolder;
+}
+#Cards{
+    height: 250px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#home{
+    min-height: 40vh;
+}
+
+#nature, #food, #landscape, #pets, #portrait, #sports, #street, #bAndw, #storm{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.reveal{
+    position: relative;
+    transform:translateY(150px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
